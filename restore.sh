@@ -4,14 +4,14 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-EXPECTEDARGS=1
+EXPECTEDARGS=2
 if [ $# -lt $EXPECTEDARGS ]; then
-  echo "Usage: $0 <TARBALL>"
+  echo "Usage: $0 <TARBALL> <NEW_DATA_VOL_CONTAINER_NAME>"
   exit 1
 fi
 
 TARBALL=$1
-DATA_VOL_CONT=letsencrypt-data
+DATA_VOL_CONT=$2
 
 # create new data vol container
 docker create -v /etc/letsencrypt --name $DATA_VOL_CONT busybox true
