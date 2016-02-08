@@ -24,3 +24,4 @@ docker run --rm --volumes-from $DATA_VOL_CONT \
 
 # check that the new container matches backup data
 docker run --rm --volumes-from $DATA_VOL_CONT busybox ls -alh /etc/letsencrypt
+docker run --rm --volumes-from $DATA_VOL_CONT busybox ls -alh /etc/letsencrypt/live/corekube.com
