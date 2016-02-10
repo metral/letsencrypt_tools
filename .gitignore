@@ -1,1 +1,3 @@
 backups/*
+*.tar*
+etc*
